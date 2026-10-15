@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" role="img" aria-labelledby="title desc">
+  <title id="title">J&amp;P Serviços Médicos</title>
+  <desc id="desc">Marca J&amp;P em azul-marinho e turquesa, com o nome Serviços Médicos.</desc>
+  <g fill="none" fill-rule="evenodd">
+    <text x="8" y="111" fill="#0b355e" font-family="Georgia, 'Times New Roman', serif" font-size="116" font-weight="700" letter-spacing="-6">J</text>
+    <text x="83" y="105" fill="#20b8c6" font-family="Georgia, 'Times New Roman', serif" font-size="90" font-weight="700">&amp;</text>
+    <text x="179" y="111" fill="#0b355e" font-family="Georgia, 'Times New Roman', serif" font-size="116" font-weight="700">P</text>
+    <path d="M291 31v88" stroke="#d0ad73" stroke-width="2"/>
+    <text x="322" y="68" fill="#20b8c6" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" letter-spacing="7">SERVIÇOS</text>
+    <text x="322" y="106" fill="#20b8c6" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" letter-spacing="7">MÉDICOS</text>
+  </g>
+</svg>

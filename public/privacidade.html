@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f2f7fa">
+  <meta name="description" content="Como a J&P Serviços Ltda. trata os dados das candidaturas, em conformidade com a LGPD.">
+  <link rel="icon" type="image/svg+xml" href="./assets/jp-symbol.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <title>Aviso de privacidade | J&P Serviços Ltda.</title>
+  <style>
+    :root{
+      --navy:#0b3d63; --blue:#0d719c; --ink:#2f4d61; --muted:#5f7887;
+      --line:#d7e5ed; --bg:#f2f7fa; --surface:#fff; --tint:#e6f2f8;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:24px}
+    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:var(--blue);text-underline-offset:3px}
+    a:focus-visible{outline:3px solid rgba(13,113,156,.35);outline-offset:3px;border-radius:4px}
+    .wrap{width:min(1080px,100% - 48px);margin-inline:auto}
+
+    .top{background:var(--surface);border-bottom:1px solid var(--line)}
+    .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0}
+    .top img{display:block;width:min(260px,52vw);height:auto}
+    .back{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid #c5dbe6;border-radius:10px;color:var(--navy);font-size:.9rem;font-weight:700;text-decoration:none;white-space:nowrap}
+    .back:hover{background:var(--tint)}
+
+    .intro{padding:56px 0 40px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 14px;color:var(--blue);font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow::before{content:"";width:28px;height:2px;background:var(--blue)}
+    h1{margin:0 0 16px;color:var(--navy);font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;line-height:1.08;letter-spacing:-.03em}
+    .lead{max-width:640px;margin:0;color:var(--ink);font-size:1.08rem}
+    .updated{margin:20px 0 0;color:var(--muted);font-size:.86rem;font-weight:600}
+
+    .layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;align-items:start;padding-bottom:72px}
+    .toc{position:sticky;top:24px;padding-top:4px}
+    .toc strong{display:block;margin-bottom:12px;color:var(--muted);font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+    .toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+    .toc a{display:block;padding:8px 0 8px 16px;margin-left:-2px;border-left:2px solid transparent;color:var(--ink);font-size:.92rem;font-weight:600;text-decoration:none}
+    .toc a:hover{color:var(--blue);border-left-color:var(--blue)}
+
+    .content{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:8px 44px}
+    .content section{display:grid;grid-template-columns:56px minmax(0,1fr);gap:0 8px;padding:36px 0}
+    .content section+section{border-top:1px solid var(--line)}
+    .num{color:#8cc1d8;font-size:1.9rem;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+    h2{margin:0 0 12px;color:var(--navy);font-size:1.4rem;font-weight:800;line-height:1.25;letter-spacing:-.015em}
+    .content p{margin:0 0 12px}
+    .content p:last-child{margin-bottom:0}
+    ul.list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    ul.list li{position:relative;padding-left:26px}
+    ul.list li::before{content:"";position:absolute;left:2px;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--tint);border:2px solid var(--blue)}
+    ul.list b{color:var(--navy)}
+    .contact{margin:18px 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .contact div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:baseline;padding:13px 18px;background:var(--bg)}
+    .contact div+div{border-top:1px solid var(--line)}
+    .contact small{color:var(--muted);font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+    .contact span{color:var(--navy);font-size:.95rem;font-weight:700;line-height:1.5;overflow-wrap:break-word}
+    .content .note{margin-top:20px;padding:14px 18px;border-radius:12px;background:var(--tint);color:var(--navy);font-size:.95rem;font-weight:600}
+
+    footer{border-top:1px solid var(--line);background:var(--surface)}
+    footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding:28px 0;color:var(--muted);font-size:.86rem;line-height:1.6}
+    footer strong{color:var(--navy)}
+
+    @media (max-width:860px){
+      .layout{grid-template-columns:minmax(0,1fr);gap:28px}
+      .toc{position:static}
+      .toc ol{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;border:0}
+      .toc a{padding:9px 14px;margin:0;border:1px solid var(--line);border-radius:99px;background:var(--surface);white-space:nowrap;font-size:.86rem}
+      .toc a:hover{border-color:var(--blue)}
+      .content{padding:4px 22px}
+      .content section{grid-template-columns:1fr;padding:28px 0}
+      .num{margin-bottom:4px;font-size:1.3rem}
+      .intro{padding:36px 0 28px}
+      .contact div{grid-template-columns:1fr;gap:2px}
+    }
+    @media (max-width:520px){
+      .wrap{width:min(1080px,100% - 32px)}
+      .back span{display:none}
+      .back{padding:0 14px}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a href="./#/candidatura/medico" aria-label="J&P Serviços Ltda. — voltar ao credenciamento"><img src="./assets/jp-logo.svg" width="942" height="189" alt="J&P Serviços Ltda. — serviços médicos e consultoria em gestão pública"></a>
+      <a class="back" href="./#/candidatura/medico">← <span>Voltar ao credenciamento</span></a>
+    </div>
+  </header>
+
+  <div class="wrap intro">
+    <p class="eyebrow">LGPD · Lei nº 13.709/2018</p>
+    <h1>Aviso de privacidade</h1>
+    <p class="lead">Explicamos, de forma direta, quais dados pedimos nas candidaturas médicas e de colaboradores, para que usamos e como você pode exercer seus direitos.</p>
+    <p class="updated">J&amp;P Serviços Ltda. · Atualizado em setembro de 2026</p>
+  </div>
+
+  <div class="wrap layout">
+    <nav class="toc" aria-label="Neste aviso">
+      <strong>Neste aviso</strong>
+      <ol>
+        <li><a href="#quem">Quem recebe seus dados</a></li>
+        <li><a href="#finalidade">Finalidade e dados</a></li>
+        <li><a href="#armazenamento">Armazenamento e acesso</a></li>
+        <li><a href="#direitos">Conservação e seus direitos</a></li>
+        <li><a href="#portal">Uso do portal</a></li>
+      </ol>
+    </nav>
+
+    <main class="content">
+      <section id="quem">
+        <span class="num" aria-hidden="true">01</span>
+        <div>
+          <h2>Quem recebe seus dados</h2>
+          <p>A <strong>J&amp;P Serviços Ltda.</strong>, CNPJ 46.326.571/0001-11, com sede em Cerquilho/SP, é a responsável pelo tratamento dos dados enviados neste portal.</p>
+          <div class="contact">
+            <div><small>E-mail</small><span><a href="mailto:administrativo@jepservicos.com.br">administrativo@jepservicos.com.br</a></span></div>
+            <div><small>Telefone</small><span>(15) 99672-7181</span></div>
+            <div><small>Endereço</small><span>Av. Presidente Washington Luiz, 199, Sala 02, Centro, Cerquilho/SP · CEP 18.520-039</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="finalidade">
+        <span class="num" aria-hidden="true">02</span>
+        <div>
+          <h2>Finalidade e dados solicitados</h2>
+          <p>Usamos os dados fornecidos para receber, analisar e acompanhar sua candidatura e entrar em contato sobre oportunidades. O formulário solicita:</p>
+          <ul class="list">
+            <li><b>Identificação e contato:</b> nome, e-mail, telefone e cidade de atuação.</li>
+            <li><b>Atuação profissional:</b> especialidade, experiência e disponibilidade.</li>
+            <li><b>Currículo e comprovantes:</b> documentos anexados à candidatura.</li>
+            <li><b>Candidatura médica:</b> modalidade de contratação (Mutirão, Fixo ou Plantões) e, se desejar, dados da empresa (CNPJ e Cartão CNPJ) e conta para recebimento. Esses dados da empresa são opcionais.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="armazenamento">
+        <span class="num" aria-hidden="true">03</span>
+        <div>
+          <h2>Armazenamento e acesso</h2>
+          <p>Os registros ficam em banco de dados protegido e os documentos em armazenamento privado. O acesso às candidaturas e aos arquivos exige credenciais administrativas e é restrito à equipe autorizada da J&amp;P.</p>
+          <p>Evite enviar informações de terceiros ou dados além dos solicitados no formulário.</p>
+        </div>
+      </section>
+
+      <section id="direitos">
+        <span class="num" aria-hidden="true">04</span>
+        <div>
+          <h2>Conservação e seus direitos</h2>
+          <p>Mantemos os dados somente pelo período necessário à análise da candidatura e ao cumprimento de obrigações legais aplicáveis.</p>
+          <p>Conforme a Lei Geral de Proteção de Dados (LGPD), você pode, quando cabível, solicitar:</p>
+          <ul class="list">
+            <li>confirmação de que tratamos seus dados;</li>
+            <li>acesso aos dados que mantemos;</li>
+            <li>correção de dados incompletos ou desatualizados;</li>
+            <li>exclusão dos dados.</li>
+          </ul>
+          <p class="note">Para fazer uma solicitação, escreva para <a href="mailto:administrativo@jepservicos.com.br">administrativo@jepservicos.com.br</a>.</p>
+        </div>
+      </section>
+
+      <section id="portal">
+        <span class="num" aria-hidden="true">05</span>
+        <div>
+          <h2>Uso do portal</h2>
+          <p>Os dados são transmitidos por conexão segura (HTTPS, com SSL/TLS). O envio da candidatura não garante contratação.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span><strong>J&amp;P Serviços Ltda.</strong> · CNPJ 46.326.571/0001-11 · Inscrição Municipal 17931</span>
+      <span>Serviços médicos e consultoria em gestão pública · Cerquilho/SP</span>
+    </div>
+  </footer>
+</body>
+</html>
