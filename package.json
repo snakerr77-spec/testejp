@@ -1,0 +1,30 @@
+{
+  "name": "jp-servicos-medicos-recrutamento",
+  "private": true,
+  "version": "13.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "dev:host": "vite --host 0.0.0.0",
+    "dev:cloudflare": "npm run build && wrangler pages dev dist --port 8788",
+    "check": "tsc -b --pretty false && tsc -p tsconfig.functions.json --pretty false",
+    "db:local": "wrangler d1 execute local --local --file=schema.sql"
+  },
+  "dependencies": {
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260928.1",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "wrangler": "^4.143.0"
+  }
+}
